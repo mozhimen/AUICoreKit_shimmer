@@ -7,25 +7,42 @@
  */
 
 buildscript {
-  apply from: rootProject.file('versions.gradle')
+//  apply from: rootProject.file('versions.gradle')
   repositories {
-    mavenLocal()
-    jcenter()
+    gradlePluginPortal()
+    maven { url 'https://maven.aliyun.com/repository/central' }
+    maven { url 'https://maven.aliyun.com/repository/google' }
+    maven { url 'https://maven.aliyun.com/repository/jcenter' }
+    maven { url 'https://maven.aliyun.com/repository/public' }
+    maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
+    maven { url 'https://maven.aliyun.com/repository/grails-core' }
+    maven { url 'https://gitee.com/liuchaoya/libcommon/raw/master/repository/' }
+    maven { url "https://repo.eclipse.org/content/repositories/paho-snapshots/" }
+    maven { url 'https://developer.huawei.com/repo/' }
+    maven { url "https://jitpack.io" }
+    maven { url 'https://www.jitpack.io' }
+    mavenCentral()
     google()
   }
   dependencies {
-    classpath plugs.agp
-    classpath plugs.kotlin
+//    classpath plugs.agp
+//    classpath plugs.kotlin
+    dependencies {
+      classpath 'com.android.tools.build:gradle:7.3.1'
+      classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.8.0"
+      // NOTE: Do not place your application dependencies here; they belong
+      // in the individual module build.gradle files
+    }
   }
 }
 
-allprojects {
-  repositories {
-    mavenLocal()
-    jcenter()
-    google()
-  }
-}
+//allprojects {
+//  repositories {
+//    mavenLocal()
+//    jcenter()
+//    google()
+//  }
+//}
 
 task clean(type: Delete) {
   delete rootProject.buildDir

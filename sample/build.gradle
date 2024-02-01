@@ -9,32 +9,45 @@
 plugins {
   id 'com.android.application'
   id 'kotlin-android'
-  id 'kotlin-android-extensions'
+  id 'kotlin-kapt'
 }
 
 android {
-  compileSdkVersion versions.compileSdk
+  namespace "com.facebook.shimmer.sample"
+    compileSdk 33//versions.compileSdk
 
-  defaultConfig {
-    applicationId 'com.facebook.shimmer.sample'
-    minSdkVersion versions.minSdk
-    targetSdkVersion versions.targetSdk
-    versionCode 1
-    versionName '1.0'
+    defaultConfig {
+      applicationId 'com.facebook.shimmer.sample'
+      minSdk 21//versions.minSdk
+      targetSdk 33//versions.targetSdk
+      versionCode 1
+      versionName '1.0'
+    }
+
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+    }
   }
 
-  compileOptions {
-    sourceCompatibility JavaVersion.VERSION_1_8
-    targetCompatibility JavaVersion.VERSION_1_8
-  }
+    compileOptions {
+      sourceCompatibility JavaVersion.VERSION_1_8
+      targetCompatibility JavaVersion.VERSION_1_8
+    }
 
-  kotlinOptions {
-    jvmTarget = '1.8'
+    kotlinOptions {
+      jvmTarget = '1.8'
+    }
+  buildFeatures {
+    dataBinding true
   }
 }
 
 dependencies {
-  implementation deps.shimmer
-  implementation deps.kotlinStdlib
-  implementation deps.constraintLayout
+//  implementation deps.shimmer
+//  implementation deps.kotlinStdlib
+//  implementation deps.constraintLayout
+  implementation project(':shimmer')
+  implementation project(':SwiftKit:basick')
 }
