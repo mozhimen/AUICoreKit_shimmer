@@ -16,25 +16,25 @@ import android.widget.Toast
 import com.facebook.shimmer.Shimmer
 import com.facebook.shimmer.ShimmerFrameLayout
 import com.facebook.shimmer.sample.databinding.MainBinding
-import com.mozhimen.basick.elemk.androidx.appcompat.bases.databinding.BaseActivityVB
+import com.mozhimen.basick.elemk.androidx.appcompat.bases.databinding.BaseActivityVDB
 
-class MainActivity : BaseActivityVB<MainBinding>(), View.OnClickListener {
+class MainActivity : BaseActivityVDB<MainBinding>(), View.OnClickListener {
   private lateinit var shimmerViewContainer: ShimmerFrameLayout
   private lateinit var presetButtons: Array<Button>
   private var currentPreset = -1
   private var toast: Toast? = null
 
   override fun initView(savedInstanceState: Bundle?) {
-    shimmerViewContainer = vb.shimmerViewContainer
+    shimmerViewContainer = vdb.shimmerViewContainer
     presetButtons =
         arrayOf(
-            vb.presetButton0,
-            vb.presetButton1,
-            vb.presetButton2,
-            vb.presetButton3,
-            vb.presetButton4,
-            vb.presetButton5,
-            vb.presetButton6)
+            vdb.presetButton0,
+            vdb.presetButton1,
+            vdb.presetButton2,
+            vdb.presetButton3,
+            vdb.presetButton4,
+            vdb.presetButton5,
+            vdb.presetButton6)
     presetButtons.forEach { it.setOnClickListener(this@MainActivity) }
     selectPreset(0, false)
   }
