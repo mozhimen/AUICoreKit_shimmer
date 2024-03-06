@@ -5,7 +5,7 @@
     android:allowBackup="false"
     android:hardwareAccelerated="true"
     android:icon="@drawable/icon"
-    android:theme="@style/Theme.AUICoreKit"
+    android:theme="@style/Theme.AXmlKit"
     android:label="@string/app_name">
 
     <activity

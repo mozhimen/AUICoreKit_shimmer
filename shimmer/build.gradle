@@ -9,7 +9,7 @@
 apply plugin: 'com.android.library'
 
 android {
-  compileSdk 33//Version versions.compileSdk
+  compileSdk 34//Version versions.compileSdk
 
   defaultConfig {
     minSdk 19//Version versions.minSdk

@@ -14,7 +14,7 @@ plugins {
 
 android {
   namespace "com.facebook.shimmer.sample"
-    compileSdk 33//versions.compileSdk
+    compileSdk 34//versions.compileSdk
 
     defaultConfig {
       applicationId 'com.facebook.shimmer.sample'

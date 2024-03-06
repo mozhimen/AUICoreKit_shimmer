@@ -25,11 +25,11 @@ dependencyResolutionManagement {
   }
 }
 
-rootProject.name = "AUICoreKit_shimmer"
+rootProject.name = "AXmlKit_shimmer"
 include ':shimmer'
 include ':sample'
 //SwiftKit
 include ':SwiftKit'
 project(':SwiftKit').projectDir = new File("C:\\Users\\${System.getenv().get("USERNAME")}\\Documents\\GitHub\\SwiftKit")
 include ':SwiftKit:basick'
-include ':SwiftKit:uicorek'
+include ':SwiftKit:xmlk'
