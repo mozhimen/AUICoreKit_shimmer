@@ -14,6 +14,12 @@ android {
 
   defaultConfig {
     minSdk 19//Version versions.minSdk
+    multiDexEnabled true
+  }
+
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
   }
 }
 
