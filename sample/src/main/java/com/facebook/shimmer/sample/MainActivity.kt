@@ -16,7 +16,7 @@ import android.widget.Toast
 import com.facebook.shimmer.Shimmer
 import com.facebook.shimmer.ShimmerFrameLayout
 import com.facebook.shimmer.sample.databinding.MainBinding
-import com.mozhimen.basick.elemk.androidx.appcompat.bases.databinding.BaseActivityVDB
+import com.mozhimen.mvvmk.bases.activity.databinding.BaseActivityVDB
 
 class MainActivity : BaseActivityVDB<MainBinding>(), View.OnClickListener {
   private lateinit var shimmerViewContainer: ShimmerFrameLayout
