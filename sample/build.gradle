@@ -49,5 +49,5 @@ dependencies {
 //  implementation deps.kotlinStdlib
 //  implementation deps.constraintLayout
   implementation project(':shimmer')
-  implementation project(':SwiftKit:basick')
+  implementation project(':ASwiftKit:bindk')
 }
